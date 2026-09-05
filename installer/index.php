@@ -51,7 +51,7 @@ if(isset($uPOST['submit']) && $uPOST['submit']) {
     $rawConfigData = file_get_contents($configDirectory);
     $tgAdminId = $uPOST['admin_id'];
     $tgBotToken = $uPOST['tg_bot_token'];
-    $dbInfo['host'] = 'localhost';
+    $dbInfo['host'] = 'mysql.railway.internal';
     $dbInfo['name'] = $uPOST['database_name'];
     $dbInfo['username'] = $uPOST['database_username'];
     $dbInfo['password'] = $uPOST['database_password'];
@@ -139,7 +139,7 @@ if(isset($uPOST['submit']) && $uPOST['submit']) {
 
 function ensureAdminRecord($dbInfo, $adminNumber) {
     try {
-        $connect = @new mysqli('localhost', $dbInfo['username'], $dbInfo['password'], $dbInfo['name']);
+        $connect = @new mysqli('mysql.railway.internal', $dbInfo['username'], $dbInfo['password'], $dbInfo['name']);
         if ($connect->connect_error) {
             return false;
         }
