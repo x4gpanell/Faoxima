@@ -1,8 +1,8 @@
 <?php
 
-$dbname     = '';
-$usernamedb = '';
-$passworddb = '';
+$dbname     = 'railway';
+$usernamedb = 'root';
+$passworddb = 'IqChixpQBfDuOCZXsggPfZwnjJjSpvJA';
 
 
 $connect = null;
